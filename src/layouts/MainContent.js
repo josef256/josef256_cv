@@ -5,13 +5,11 @@ import {Home} from "../components/Home";
 export const MainContent=()=>{
     return (
         <main>
-        <Router>
             <Switch>
                 <Route path="/">
                     <Home />
                 </Route>
             </Switch>
-        </Router>
         </main>
     )
 }
