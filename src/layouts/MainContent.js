@@ -8,7 +8,7 @@ import {NoMatch} from "../components/NoMatch";
 
 export const MainContent=()=>{
     return (
-        <main>
+        <main className="w-full pt-20">
             <Switch>
                 <Route exact path="/">
                     <Home />
