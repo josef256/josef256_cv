@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 
 export const NavMenu=()=>{
+    const [isMenuVisible, setIsMenuVisible]= useState(false);
     return (
         <nav>
         <ul className="md:flex md:w-full hidden">
@@ -14,56 +15,64 @@ export const NavMenu=()=>{
             </li>
             <li className="pr-12 font-semibold text-gray-500 hover:text-gray-700 md:tracking-wide">
                 <div className="py-6 ">
-                <Link to="/">
+                <Link to="/portfolio">
                 Portfolio
                 </Link>
                 </div>
             </li>
             <li className="pr-12 font-semibold text-gray-500 hover:text-gray-700 md:tracking-wide">
                 <div className="py-6 ">
-                <Link to="/">
+                <Link to="/about">
                 About
                 </Link>
                 </div>
             </li>
             <li className="pr-12 font-semibold text-gray-500 hover:text-gray-700 md:tracking-wide">
                 <div className="py-6 ">
-                <Link to="/">
+                <Link to="/contact">
                     Contact
                 </Link>
                 </div>
             </li>
         </ul>
-            <div className="md:hidden">
+            <div className="md:hidden" onClick={()=>setIsMenuVisible(!isMenuVisible)}>
                 <svg className="text-gray-600 h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h8m-8 6h16" />
                 </svg>
             </div>
-            <div className="md:hidden w-32 p-4 bg-gray-300 absolute mx-4 right-0 rounded-md">
+            <div className={`${isMenuVisible? "block": "hidden"} md:hidden w-32 p-4 bg-gray-300 absolute mx-4 right-0 rounded-md`}>
                 <ul className="grid grid-cols-1 gap-6 grid-rows-4">
-                    <li className="font-semibold text-gray-700 flex items-center">
-                        <svg className="text-gray-700 h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <li className="font-semibold text-gray-700 hover:text-gray-700 flex items-center">
+                        <svg className="text-gray-700 hover:text-gray-700 h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
                         </svg>
-                        Home
+                        <Link  to="/">
+                            Home
+                        </Link>
                     </li>
-                    <li className="font-semibold text-gray-700 flex items-center">
-                        <svg className="text-gray-700 h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <li className="font-semibold text-gray-500 hover:text-gray-700 flex items-center">
+                        <svg className="text-gray-500 hover:text-gray-700 h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
                         </svg>
-                        Portfolio
+                        <Link to="/portfolio">
+                            Portfolio
+                        </Link>
                     </li>
-                    <li className="font-semibold text-gray-700 flex items-center">
-                        <svg className="text-gray-700 h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <li className="font-semibold text-gray-500 hover:text-gray-700 flex items-center">
+                        <svg className="text-gray-500 hover:text-gray-700 h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
                         </svg>
-                        About
+                        <Link to="/about">
+                            About
+                        </Link>
                     </li>
-                    <li className="font-semibold text-gray-700 flex items-center">
-                        <svg className="text-gray-700 h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <li className="font-semibold text-gray-500 hover:text-gray-700 flex items-center">
+                        <svg className="text-gray-500 hover:text-gray-700 h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
                         </svg>
-                        Contact
+                        <Link to="/contact">
+                            Contact
+                        </Link>
                     </li>
                 </ul>
             </div>

@@ -1,5 +1,9 @@
 import React from 'react';
 
 export const Home=()=>{
-    return <></>
+    return (
+        <div>
+            im in Home
+        </div>
+    )
 }
