@@ -20,13 +20,13 @@ export const NavMenu=()=>{
                 </Link>
                 </div>
             </li>
-            <li className="pr-12 font-semibold text-gray-500 hover:text-gray-700 md:tracking-wide">
+            {/* <li className="pr-12 font-semibold text-gray-500 hover:text-gray-700 md:tracking-wide">
                 <div className="py-6 ">
                 <Link to="/about">
                 About
                 </Link>
                 </div>
-            </li>
+            </li> */}
             <li className="pr-12 font-semibold text-gray-500 hover:text-gray-700 md:tracking-wide">
                 <div className="py-6 ">
                 <Link to="/contact">
