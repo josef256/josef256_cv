@@ -5,7 +5,8 @@ import {BrowserRouter as Router} from "react-router-dom";
 
 function App() {
   return (
-<div className="min-h-full h-full bg-gray-100 ">
+<div className="min-h-full h-full bg-white " >
+    <div className="h-32 w-32 absolute top-0 right-0 bg-blue-500" style={{clipPath:'ellipse(73% 39% at 91% 10%)'}}></div>
     <Router>
     <HeaderNav/>
    <MainContent/>
