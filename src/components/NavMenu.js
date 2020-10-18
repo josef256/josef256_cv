@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import { useLocation } from 'react-router-dom'
 
-export const NavMenu=()=>{
+export const NavMenu=(props)=>{
     const [isMenuVisible, setIsMenuVisible]= useState(false);
     const route = useLocation();
     return (
@@ -38,38 +38,38 @@ export const NavMenu=()=>{
             </li>
         </ul>
             <div className="md:hidden" onClick={()=>setIsMenuVisible(!isMenuVisible)}>
-                <svg className="text-white h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className={`${props.isScroll?'text-gray-600': 'text-white'} h-8 w-8`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h8m-8 6h16" />
                 </svg>
             </div>
-            <div className={`${isMenuVisible? "block": "hidden"} md:hidden p-4 bg-gray-300 absolute mx-4 right-0 rounded-md`}>
-                <ul className="grid grid-cols-2 gap-6 grid-rows-2">
-                    <li className="font-semibold text-gray-700 hover:text-gray-700 flex items-center">
-                        <svg className="text-gray-700 hover:text-gray-700 h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className={`${isMenuVisible? "block": "hidden"} md:hidden p-4 shadow-lg bg-gray-100 absolute mx-4 right-0 rounded-md`}>
+                <ul className="grid grid-cols-1 gap-6 grid-rows-2">
+                    <li className={`${route.pathname==='/' ?'text-blue-500': 'text-gray-500'} font-semibold  hover:text-blue-500 flex items-center`}>
+                        <svg className={`${route.pathname==='/' ?'text-blue-500': 'text-gray-500'}  hover:text-blue-500 h-4 w-4 mr-2`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
                         </svg>
                         <Link  to="/">
                             Home
                         </Link>
                     </li>
-                    <li className="font-semibold text-gray-500 hover:text-gray-700 flex items-center">
-                        <svg className="text-gray-500 hover:text-gray-700 h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <li className={`${route.pathname==='/portfolio' ?'text-blue-500': 'text-gray-500'} font-semibold  hover:text-blue-500 flex items-center`}>
+                        <svg className={`${route.pathname==='/portfolio' ?'text-blue-500': 'text-gray-500'}  hover:text-blue-500 h-4 w-4 mr-2`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
                         </svg>
                         <Link to="/portfolio">
                             Portfolio
                         </Link>
-                    </li>
-                    <li className="font-semibold text-gray-500 hover:text-gray-700 flex items-center">
-                        <svg className="text-gray-500 hover:text-gray-700 h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    </li> 
+                {/* <li className={`${route.pathname==='/about' ?'text-blue-500': 'text-gray-500'} font-semibold  hover:text-blue-500 flex items-center`}>
+                        <svg className={`${route.pathname==='/about' ?'text-blue-500': 'text-gray-500'}  hover:text-blue-500 h-4 w-4 mr-2`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
                         </svg>
                         <Link to="/about">
                             About
                         </Link>
-                    </li>
-                    <li className="font-semibold text-gray-500 hover:text-gray-700 flex items-center">
-                        <svg className="text-gray-500 hover:text-gray-700 h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    </li> */}
+                    <li className={`${route.pathname==='/contact' ?'text-blue-500': 'text-gray-500'} font-semibold  hover:text-blue-500 flex items-center`}>
+                        <svg className={`${route.pathname==='/contact' ?'text-blue-500': 'text-gray-500'}  hover:text-blue-500 h-4 w-4 mr-2`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
                         </svg>
                         <Link to="/contact">

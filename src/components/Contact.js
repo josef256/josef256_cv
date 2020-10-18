@@ -3,7 +3,7 @@ import React from 'react';
 export const Contact=()=>{
     return (
         <div className="min-h-full grid grid-cols-1 lg:grid-cols-3">
-           <div className="bg-gray-200 p-10 grid grid-cols-1 gap-4 lg:gap-1 max-w-md col-span-1 min-w-full">
+           <div className="bg-gray-100 rounded-lg p-10 grid grid-cols-1 gap-4 lg:gap-1 max-w-md col-span-1 min-w-full">
               <div className="text-3xl font-extrabold text-gray-800">Get in touch</div>
               <div className="font-semibold text-gray-600">You can send me directly an email or contact me via the links below:</div>
               <div className="flex">
