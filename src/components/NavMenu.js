@@ -8,15 +8,15 @@ export const NavMenu=(props)=>{
     return (
         <nav>
         <ul className="md:flex md:w-full hidden">
-            <li className={`${route.pathname==='/' ? 'text-blue-500': 'text-gray-500' } pr-12 font-semibold  hover:text-blue-500 md:tracking-wide`}>
-                <div className={`${route.pathname==='/' ? 'border-b-2 border-blue-500': '' } py-6`}>
+            <li className={`${route.pathname==='/josef256_cv/' ? 'text-blue-500': 'text-gray-500' } pr-12 font-semibold  hover:text-blue-500 md:tracking-wide`}>
+                <div className={`${route.pathname==='/josef256_cv/' ? 'border-b-2 border-blue-500': '' } py-6`}>
                 <Link  to="/josef256_cv/">
                 Home
                 </Link>
                 </div>
             </li>
-            <li className={`${route.pathname==='/portfolio' ? 'text-blue-500': 'text-gray-500' } pr-12 font-semibold  hover:text-blue-500 md:tracking-wide`}>
-                <div className={`${route.pathname==='/portfolio' ? 'border-b-2 border-blue-500': '' } py-6`}>
+            <li className={`${route.pathname==='/josef256_cv/portfolio' ? 'text-blue-500': 'text-gray-500' } pr-12 font-semibold  hover:text-blue-500 md:tracking-wide`}>
+                <div className={`${route.pathname==='/josef256_cv/portfolio' ? 'border-b-2 border-blue-500': '' } py-6`}>
                 <Link  to="/josef256_cv/portfolio">
                 Portfolio
                 </Link>
@@ -29,8 +29,8 @@ export const NavMenu=(props)=>{
                 </Link>
                 </div>
             </li>  */}
-            <li className={`${route.pathname==='/contact' ? 'text-blue-500': 'text-gray-500' } pr-12 font-semibold  hover:text-blue-500 md:tracking-wide`}>
-                <div className={`${route.pathname==='/contact' ? 'border-b-2 border-blue-500': '' } py-6`}>
+            <li className={`${route.pathname==='/josef256_cv/contact' ? 'text-blue-500': 'text-gray-500' } pr-12 font-semibold  hover:text-blue-500 md:tracking-wide`}>
+                <div className={`${route.pathname==='/josef256_cv/contact' ? 'border-b-2 border-blue-500': '' } py-6`}>
                 <Link  to="/josef256_cv/contact">
                 Contact
                 </Link>
@@ -68,8 +68,8 @@ export const NavMenu=(props)=>{
                             About
                         </Link>
                     </li> */}
-                    <li className={`${route.pathname==='/contact' ?'text-blue-500': 'text-gray-500'} font-semibold  hover:text-blue-500 flex items-center`}>
-                        <svg className={`${route.pathname==='/contact' ?'text-blue-500': 'text-gray-500'}  hover:text-blue-500 h-4 w-4 mr-2`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <li className={`${route.pathname==='/josef256_cv/contact' ?'text-blue-500': 'text-gray-500'} font-semibold  hover:text-blue-500 flex items-center`}>
+                        <svg className={`${route.pathname==='/josef256_cv/contact' ?'text-blue-500': 'text-gray-500'}  hover:text-blue-500 h-4 w-4 mr-2`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
                         </svg>
                         <Link to="/josef256_cv/contact">
