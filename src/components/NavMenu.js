@@ -42,7 +42,7 @@ export const NavMenu=(props)=>{
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h8m-8 6h16" />
                 </svg>
             </div>
-            <div className={`${isMenuVisible? "block": "hidden"} md:hidden p-4 shadow-lg bg-gray-100 absolute mx-4 right-0 rounded-md`}>
+            <div className={`${isMenuVisible? "block": "hidden"} md:hidden p-4 shadow-lg bg-white absolute mx-4 right-0 rounded-md`}>
                 <ul className="grid grid-cols-1 gap-6 grid-rows-2">
                     <li className={`${route.pathname==='/' ?'text-blue-500': 'text-gray-500'} font-semibold  hover:text-blue-500 flex items-center`}>
                         <svg className={`${route.pathname==='/' ?'text-blue-500': 'text-gray-500'}  hover:text-blue-500 h-4 w-4 mr-2`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
