@@ -10,20 +10,20 @@ export const MainContent=()=>{
     return (
         <main className="w-full pt-20  h-full">
             <Switch>
-                <Route exact path="/">
+                <Route exact path="/josef256_cv/">
                     <Home />
                 </Route>
-                <Route path="/portfolio">
+                <Route path="/josef256_cv/portfolio">
                     <Portfolio />
                 </Route>
-                <Route path="/about">
+                <Route path="/josef256_cv/about">
                     <About />
                 </Route>
-                <Route path="/contact">
+                <Route path="/josef256_cv/contact">
                     <Contact />
                 </Route>
                 <Route path="*">
-                    <NoMatch />
+                <Home />
                 </Route>
             </Switch>
         </main>
