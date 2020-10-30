@@ -1,7 +1,6 @@
 import { findAllByTestId } from '@testing-library/react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 export const Home=()=>{
     const [isEmailVisible, setIsEmailVisible]= useState(false);
     const [isWhatsAppVisible, setIsWhatsAppVisible]= useState(false);
@@ -23,7 +22,7 @@ applications aligned to customer's services. Translating solutions into code and
 working across many different APIs, third-party integrations and databases.
  </div>
                 <div className="flex flex-col md:flex-row items-center">
-                <Link className="w-full md:w-56 mb-4 md:mr-12 md:mb-0" to={'/Youssef-Hanchaoui_english_lts.pdf'} target="_blank" download>
+                <Link className="w-full md:w-56 mb-4 md:mr-12 md:mb-0" to={'/josef256_cv/Youssef-Hanchaoui_english_lts.pdf'} target="_blank" download>
                 <button className="p-1 w-full focus:outline-none  font-medium text-sm text-white bg-blue-500 hover:bg-blue-600 rounded-md mr-6 shadow-lg">
                     Download CV
                 </button>
