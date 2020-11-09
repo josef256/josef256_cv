@@ -3,11 +3,11 @@ import React from 'react';
 export const ProjectCard=(props)=>{
     const img=props.img;
 return (
-    <div className="my-4  md:w-96 w-full  shadow-lg rounded-lg">
+    <div className="my-4  md:w-96 w-full  shadow-lg rounded-lg bg-gray-100">
     <div className="bg-gray-400 rounded-lg ">
         <img className="md:w-96 w-full  h-56 object-contain" src={props.img}/>
     </div>
-    <div className="p-2 md:p-4 grid grid-cols-1 gap-4 relative -mt-1 bg-gray-100">
+    <div className="p-2 md:p-4 grid grid-cols-1 gap-4 ">
 <div className="font-bold text-gray-800 uppercase">{props.title}</div>
         <div className="text-sm font-semibold text-gray-600 leading-6">
       {props.content}
