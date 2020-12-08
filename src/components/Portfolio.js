@@ -65,14 +65,14 @@ export const Portfolio=()=>{
             indicators thanks to the sensors installed at the customer, visualize this data in
             Dashboards, define via algorithms specific to each crop variety the exact dose of
             irrigation and its optimal planning."
-            tags={['Ionic','Angular', 'RXJS', 'Axios', 'cordova']}
+            tags={['React native', 'Redux', 'Axios', 'Native base']}
             /> 
               <ProjectCard
               img={require('../assets/img/senya-1.png')}
             title="Senya"
             content="Hybrid mobile application for planning,
             management and monitoring of all farm activities."
-            tags={['Ionic','Angular', 'RXJS', 'Axios', 'cordova']}
+            tags={['React native', 'Redux', 'Axios', 'Native base']}
             /> 
            </div>
         </div>
